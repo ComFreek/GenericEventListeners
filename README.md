@@ -12,14 +12,14 @@ class MyClass extends Listenable {
 2. Use `addActionListener()` for registering for an event type and implement the `Listener` interface.
 ```
 class Main {
-        public static void main(String[] args) {
-          MyClass myObj = new MyClass();
-          myObj.addEventListener("dispatched", new Listener<String>() {
-              public boolean run(Event<String> e) {
-                  System.out.println(e.data);
-             }
-          });
-          myObj.doDispatch();
+      public static void main(String[] args) {
+        MyClass myObj = new MyClass();
+        myObj.addEventListener("dispatched", new Listener<String>() {
+            public boolean run(Event<String> e) {
+              System.out.println(e.data);
+            }
+        });
+        myObj.doDispatch();
       }
 }
 ```
